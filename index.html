@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeluAdmin - Dashboard</title>
+    <title>PeluAdmin</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- SIDEBAR / MENU LATERAL -->
+    <!-- CABECERA PRINCIPAL -->
+    <header>
+        <h1>PeluAdmin</h1>
+        <p>Sistema de gestión integral para peluquerías y centros de estética.</p>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN LATERAL -->
     <aside>
-        <h2>PeluAdmin</h2>
         <nav>
+            <h2>Navegación</h2>
             <ul>
-                <li><a href="#dashboard" aria-current="page">Dashboard</a></li>
+                <li><a href="#dashboard">Panel principal</a></li>
                 <li><a href="#calendario">Calendario</a></li>
                 <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#inventario">Inventario</a></li>
@@ -22,66 +28,53 @@
         </nav>
     </aside>
 
-    <!-- HEADER Y MAIN -->
-    <div class="main-wrapper">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
 
-        <!-- ENCABEZADO SUPERIOR -->
-        <header>
-            <h1>DASHBOARD</h1>
-            <div>
-                <span id="user-name"></span>
-                <img id="user-avatar" src="" alt="Foto de perfil" width="40" height="40">
-            </div>
-        </header>
+        <!-- PANEL PRINCIPAL -->
+        <section id="dashboard">
+            <h2>Panel Principal</h2>
+            <p>Visión general de la actividad y rendimiento de la peluquería.</p>
 
-        <!-- CONTENIDO PRINCIPAL -->
-        <main id="main-content">
+            <!-- SECCIÓN DE RESUMEN -->
+            <section id="resumen">
+                <h3>Resumen</h3>
 
-            <!-- SECCION 1: METRICAS CLAVE -->
-            <section id="metricas-clave">
                 <article>
-                    <h3>Ingresos Estimados</h3>
-                    <p id="ingresos-mes"></p>
+                    <h4>Ingresos Estimados</h4>
+                    <p>3.450 €</p>
                 </article>
 
                 <article>
-                    <h3>Servicios Realizados</h3>
-                    <p id="total-servicios"></p>
+                    <h4>Servicios Realizados</h4>
+                    <p>128</p>
                 </article>
 
                 <article>
-                    <h3>Productos Usados</h3>
-                    <p id="total-productos"></p>
+                    <h4>Productos Usados</h4>
+                    <p>45</p>
                 </article>
 
                 <article>
-                    <h3>Clientes Atendidos</h3>
-                    <p id="total-clientes"></p>
+                    <h4>Clientes Atendidos</h4>
+                    <p>92</p>
                 </article>
             </section>
 
-            <!-- SECCION 2: OPERATIVA DIARIA -->
-            <section id="operativa-dashboard">
+            <!-- OPERATIVA DIARIA Y TABLAS -->
+            <section id="operativa">
+                <h3>Operativa Diaria</h3>
 
-                <!-- Citas proximas del dia -->
                 <article>
-                    <h3>Proximas Citas de Hoy</h3>
-                    <ul id="lista-citas-hoy">
-                        <!-- Se insertaran dinamicamente los <li> -->
+                    <h4>Próximas Citas de Hoy</h4>
+                    <ul>
+                        <li>10:00 - Ana Gómez (Corte y Peinado)</li>
+                        <li>11:30 - Carlos Ruíz (Tinte)</li>
                     </ul>
                 </article>
 
-                <!-- Grafico: Servicios mas solicitados -->
                 <article>
-                    <h3>Servicios mas solicitados</h3>
-                    <div id="contenedor-grafico-servicios">
-                        <!-- Canvas o SVG del grafico -->
-                    </div>
-                </article>
-
-                <!-- Alertas de Stock necesario -->
-                <article>
-                    <h3>Restock mas necesario</h3>
+                    <h4>Restock Más Necesario</h4>
                     <table>
                         <thead>
                             <tr>
@@ -90,17 +83,25 @@
                                 <th scope="col">Stock Actual</th>
                             </tr>
                         </thead>
-                        <tbody id="tabla-restock-body">
-                            <!-- Se insertaran dinamicamente los <tr> -->
+                        <tbody>
+                            <tr>
+                                <td>P01</td>
+                                <td>Champú Hidratante</td>
+                                <td>2 unidades</td>
+                            </tr>
                         </tbody>
                     </table>
                 </article>
-
             </section>
+        </section>
 
-        </main>
+    </main>
 
-    </div>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>PeluAdmin - Versión 1.0</p>
+    </footer>
 
+    <script src="js/app.js"></script>
 </body>
 </html>
