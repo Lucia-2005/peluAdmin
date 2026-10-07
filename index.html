@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeluAdmin - Dashboard</title>
+</head>
+<body>
+
+    <!-- SIDEBAR / MENU LATERAL DE NAVEGACION -->
+    <aside>
+        <h2>PeluAdmin</h2>
+        <nav>
+            <ul>
+                <!-- Puedes usar 'aria-current="page"' en el enlace activo para accesibilidad -->
+                <li><a href="#dashboard" aria-current="page">Dashboard</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#calendario">Calendario</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#trabajadores">Trabajadores</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ENCABEZADO SUPERIOR -->
+    <header>
+        <h1>DASHBOARD</h1>
+        <div>
+            <span>Bienvenida Lucia</span>
+            <!-- Imagen de perfil / Avatar del usuario -->
+            <img src="avatar-placeholder.png" alt="Foto de perfil de Lucia" width="40" height="40">
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL (Este bloque cambiara dinamicamente segun la seccion elegida) -->
+    <main id="main-content">
+
+        <!-- SECCION: METRICAS DEL MES -->
+        <section id="metricas-mes">
+            <h2>Este mes</h2>
+            
+            <article>
+                <h3>Servicios</h3>
+                <p>24</p>
+            </article>
+
+            <article>
+                <h3>Productos Usados</h3>
+                <p>47</p>
+            </article>
+
+            <article>
+                <h3>Clientes</h3>
+                <p>20</p>
+            </article>
+        </section>
+
+        <!-- SECCION: GRAFICOS Y ESTADISTICAS -->
+        <section id="graficos-estadisticas">
+
+            <!-- Grafico 1: Productos mas usados -->
+            <article>
+                <h3>Productos mas usados</h3>
+                <!-- En el futuro puedes reemplazar el img por una libreria de graficos (Chart.js, Canvas, SVG, etc.) -->
+                <img src="grafico-productos.png" alt="Grafico de barras con los productos mas usados">
+            </article>
+
+            <!-- Grafico 2: Servicios realizados -->
+            <article>
+                <h3>Servicios realizados</h3>
+                <img src="grafico-servicios.png" alt="Grafico circular de servicios realizados">
+            </article>
+
+            <!-- Grafico 3: Actividad -->
+            <article>
+                <h3>Actividad</h3>
+                <img src="grafico-actividad.png" alt="Grafico de barras de la actividad mensual">
+            </article>
+
+            <!-- Tabla/Lista: Restock mas necesario -->
+            <article>
+                <h3>Restock mas necesario</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Tinte Fantasia - Rosa</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>Decoloracion 50 grados</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>Tinte Natural - Chocolate</td>
+                            <td>14</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
