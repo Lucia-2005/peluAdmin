@@ -11,10 +11,13 @@
     <!-- HEADER PRINCIPAL -->
     <header>
         <h1>PeluAdmin</h1>
+        <button class="boton-menu" type="button" aria-expanded="false" aria-controls="sidebar">
+            Menú
+        </button>
     </header>
 
     <!-- BARRA LATERAL -->
-    <aside>
+    <aside id="sidebar">
         <nav>
             <h2>Navegación</h2>
             <ul>
@@ -29,11 +32,11 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
+        <img class="icono-usuario" src="img/icon-user.png" alt="Foto de usuario">
 
         <!-- PANEL PRINCIPAL -->
         <section id="dashboard">
             <h2>Dashboard</h2>
-            <p>Visión general de la actividad y rendimiento de la peluquería.</p>
 
             <!-- SECCIÓN DE RESUMEN -->
             <section id="resumen">
@@ -60,19 +63,36 @@
                 </article>
             </section>
 
-            <!--RESUMEN DIARIO Y TABLAS DEL DASHBOARD-->
+            <!--TABLAS DEL DASHBOARD-->
             <section id="dashboard-tables">
                 <h3>Resumen Diario</h3>
 
-                <article>
+                <article id="citas-hoy">
                     <h4>Próximas Citas de Hoy</h4>
-                    <ul>
-                        <li>10:00 - Ana Gómez (Corte y Peinado)</li>
-                        <li>11:30 - Carlos Ruíz (Tinte)</li>
-                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Servicio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10:00 - 10:50</td>
+                                <td>Kennai Herrero</td>
+                                <td>Corte y Peinado</td>
+                            </tr>
+                            <tr>
+                                <td>12:30 - 14:00</td>
+                                <td>Julia Pertierra</td>
+                                <td>Tinte</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </article>
 
-                <article>
+                <article id="servicios-estrella">
                     <h4>Servicios Estrella</h4>
                     <p>Los servicios más realizados este mes</p>
                     <ol>
@@ -82,7 +102,7 @@
                     </ol>
                 </article>
 
-                <article>
+                <article id="restock-mas-necesario">
                     <h4>Restock Más Necesario</h4>
                     <table>
                         <thead>
@@ -102,13 +122,12 @@
                     </table>
                 </article>
 
-                <article>
+                <article id="productos-estrella">
                     <h4>Productos Estrella</h4>
                     <p>Los productos más vendidos este mes</p>
                     <ol>
                         <li>Champú Hidratante - 42 unidades</li>
                         <li>Crema de Cuidado - 35 unidades</li>
-                        <li>Tratamiento Capilar - 28 unidades</li>
                     </ol>
                 </article>
             </section>
