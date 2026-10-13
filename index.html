@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeluAdmin</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER PRINCIPAL -->
+    <header>
+        <h1>PeluAdmin</h1>
+    </header>
+
+    <!-- BARRA LATERAL -->
+    <aside>
+        <nav>
+            <h2>Navegación</h2>
+            <ul>
+                <li><a href="#dashboard">Panel principal</a></li>
+                <li><a href="#calendario">Calendario</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#inventario">Inventario</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PANEL PRINCIPAL -->
+        <section id="dashboard">
+            <h2>Panel Principal</h2>
+            <p>Visión general de la actividad y rendimiento de la peluquería.</p>
+
+            <!-- SECCIÓN DE RESUMEN -->
+            <section id="resumen">
+                <h3>Resumen mensual</h3>
+
+                <article>
+                    <h4>Ingresos Estimados</h4>
+                    <p>3.450 €</p>
+                </article>
+
+                <article>
+                    <h4>Servicios Realizados</h4>
+                    <p>128</p>
+                </article>
+
+                <article>
+                    <h4>Productos Usados</h4>
+                    <p>45</p>
+                </article>
+
+                <article>
+                    <h4>Clientes Atendidos</h4>
+                    <p>92</p>
+                </article>
+            </section>
+
+            <!--RESUMEN DIARIO Y TABLAS DEL DASHBOARD-->
+            <section id="dashboard-tables">
+                <h3>Resumen Diario</h3>
+
+                <article>
+                    <h4>Próximas Citas de Hoy</h4>
+                    <ul>
+                        <li>10:00 - Ana Gómez (Corte y Peinado)</li>
+                        <li>11:30 - Carlos Ruíz (Tinte)</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h4>Servicios Estrella</h4>
+                    <p>Los servicios más realizados este mes</p>
+                    <ol>
+                        <li>Corte y Peinado - 42 veces</li>
+                        <li>Tinte - 35 veces</li>
+                        <li>Tratamiento Capilar - 28 veces</li>
+                    </ol>
+                </article>
+
+                <article>
+                    <h4>Restock Más Necesario</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Stock Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>P01</td>
+                                <td>Champú Hidratante</td>
+                                <td>2 unidades</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <a href="ajustes.html">Ajustes</a>
+        <br>
+        <a href="ayuda.html">Ayuda</a>
+        <p>PeluAdmin - Versión 1.0</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
