@@ -1,4 +1,11 @@
 /* Ajustes generales y colores */
+@font-face {
+    font-family: "Pacifico";
+    src: url("../fonts/Pacifico-Regular.ttf") format("truetype");
+    font-weight:lighter;
+    font-style:normal;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -40,6 +47,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 1.5rem;
+    font-family: "Pacifico", cursive;
 }
 
 /* Barra lateral y navegación */
@@ -102,13 +110,13 @@ main {
     width: 100%;
     min-width: 0;
     max-width: 1400px;
-    padding: 32px;
+    padding: 24px 32px;
     margin: 0 auto;
 }
 
 /* Título e introducción del dashboard */
 #dashboard > h2 {
-    margin: 0 0 8px;
+    margin: 0 0 16px;
     font-size: 1.8rem;
 }
 
@@ -141,7 +149,7 @@ main {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     min-width: 0;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
 }
 
 #resumen h3 {
@@ -150,7 +158,7 @@ main {
 
 #resumen article,
 #dashboard-tables article {
-    padding: 20px;
+    padding: 16px 18px;
     border: 1px solid var(--color-borde);
     border-radius: 8px;
     background: var(--color-panel);
@@ -161,7 +169,7 @@ main {
 }
 
 article h4 {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
     font-size: 1rem;
 }
 
@@ -176,7 +184,7 @@ article h4 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     min-width: 0;
-    gap: 24px;
+    gap: 18px;
 }
 
 #dashboard-tables > h3 {
@@ -184,21 +192,74 @@ article h4 {
 }
 
 #dashboard-tables article {
-    padding: 14px 16px;
+    padding: 16px 18px;
 }
 
 #dashboard-tables article h4 {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 #dashboard-tables article p {
+    margin: 0 0 12px;
     color: var(--color-suave);
 }
 
 #dashboard-tables ul,
 #dashboard-tables ol {
+    margin: 0;
     padding-left: 20px;
-    line-height: 1.5;
+    line-height: 1.3;
+}
+
+#servicios-estrella ol,
+#productos-estrella ol {
+    padding: 0;
+    list-style: none;
+}
+
+#servicios-estrella li,
+#productos-estrella li {
+    margin-top: 10px;
+}
+
+.barra-etiqueta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.barra-etiqueta strong {
+    white-space: nowrap;
+}
+
+#servicios-estrella progress,
+#productos-estrella progress {
+    display: block;
+    width: 100%;
+    height: 8px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--color-borde);
+    accent-color: var(--color-principal);
+}
+
+#servicios-estrella progress::-webkit-progress-bar,
+#productos-estrella progress::-webkit-progress-bar {
+    border-radius: 5px;
+    background: var(--color-borde);
+}
+
+#servicios-estrella progress::-webkit-progress-value,
+#productos-estrella progress::-webkit-progress-value {
+    border-radius: 5px;
+    background: var(--color-principal);
+}
+
+#servicios-estrella progress::-moz-progress-bar,
+#productos-estrella progress::-moz-progress-bar {
+    border-radius: 5px;
+    background: var(--color-principal);
 }
 
 /* Tabla de productos */
@@ -211,7 +272,7 @@ table {
 
 th,
 td {
-    padding: 10px 8px;
+    padding: 6px 8px;
     border-bottom: 1px solid var(--color-borde);
     overflow-wrap: anywhere;
 }
@@ -246,42 +307,8 @@ footer a:focus {
     text-decoration: underline;
 }
 
-/* Adaptación a pantallas medianas */
-@media (max-width: 800px) {
-    body {
-        grid-template-columns: 175px minmax(0, 1fr);
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    #resumen {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-    #resumen article,
-    #dashboard-tables article {
-        padding: 12px;
-    }
-
-    article h4 {
-        margin-bottom: 7px;
-    }
-
-    #dashboard-tables {
-        gap: 18px;
-    }
-
-    th,
-    td {
-        padding: 8px 6px;
-    }
-}
-
-/* En móviles, apila las zonas y reorganiza la navegación */
-@media (max-width: 650px) {
+/* Adaptación a pantallas de hasta 800px */
+@media (max-width: 850px) {
     body {
         display: flex;
         flex-direction: column;
@@ -327,6 +354,7 @@ footer a:focus {
     }
 
     #resumen {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
         gap: 8px;
         margin-bottom: 22px;
     }
@@ -363,16 +391,4 @@ footer a:focus {
         width: 36px;
         height: 36px;
     }
-}
-
-@media (max-width: 420px) {
-    #resumen {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    #resumen article,
-    #dashboard-tables article {
-        padding: 7px 8px;
-    }
-
 }
