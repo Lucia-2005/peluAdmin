@@ -37,10 +37,6 @@ header {
     color: #fff;
 }
 
-.boton-menu {
-    display: none;
-}
-
 header h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -272,11 +268,6 @@ footer a:focus {
 
     article h4 {
         margin-bottom: 7px;
-        font-size: 0.9rem;
-    }
-
-    #resumen article p {
-        font-size: 1.3rem;
     }
 
     #dashboard-tables {
@@ -286,7 +277,6 @@ footer a:focus {
     th,
     td {
         padding: 8px 6px;
-        font-size: 0.9rem;
     }
 }
 
@@ -302,34 +292,9 @@ footer a:focus {
         padding: 0 12px;
     }
 
-    .boton-menu {
-        display: block;
-        margin-right: 44px;
-        padding: 7px 10px;
-        border: 1px solid currentColor;
-        border-radius: 5px;
-        background: transparent;
-        color: inherit;
-        font: inherit;
-        cursor: pointer;
-    }
-
-    .boton-menu:focus-visible {
-        outline: 2px solid var(--color-texto);
-        outline-offset: 2px;
-    }
-
-    header h1 {
-        font-size: 1.3rem;
-    }
-
     aside {
-        display: none;
-        padding: 10px;
-    }
-
-    aside.is-open {
         display: block;
+        padding: 10px;
     }
 
     nav ul {
@@ -344,7 +309,6 @@ footer a:focus {
 
     nav a {
         padding: 7px 8px;
-        font-size: 0.9rem;
     }
 
     main {
@@ -352,14 +316,9 @@ footer a:focus {
         padding: 16px 12px;
     }
 
-    #dashboard > h2 {
-        font-size: 1.5rem;
-    }
-
     #resumen h3,
     #dashboard-tables > h3 {
         margin-bottom: 10px;
-        font-size: 1.05rem;
     }
 
     #dashboard-tables {
@@ -379,16 +338,6 @@ footer a:focus {
 
     article h4 {
         margin-bottom: 6px;
-        font-size: 0.85rem;
-    }
-
-    #resumen article p {
-        font-size: 1.2rem;
-    }
-
-    #dashboard-tables article p,
-    #dashboard-tables li {
-        font-size: 0.88rem;
     }
 
     #dashboard-tables ul,
@@ -400,14 +349,12 @@ footer a:focus {
     th,
     td {
         padding: 5px 3px;
-        font-size: 0.78rem;
     }
 
     footer {
         width: 100%;
         margin-bottom: 0;
         padding: 12px;
-        font-size: 0.82rem;
     }
 
     .icono-usuario {
@@ -428,18 +375,4 @@ footer a:focus {
         padding: 7px 8px;
     }
 
-    #resumen article p {
-        font-size: 1.1rem;
-    }
-
-    #dashboard > h2 {
-        font-size: 1.35rem;
-    }
-
-    #dashboard-tables article p,
-    #dashboard-tables li,
-    th,
-    td {
-        font-size: 0.75rem;
-    }
 }
