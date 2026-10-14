@@ -83,17 +83,18 @@ nav a {
     display: block;
     padding: 11px 12px;
     border-radius: 6px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 nav a:focus {
     background: var(--color-secundario);
 }
 
-/* Mantiene resaltado el enlace del panel cuando su sección es el destino actual. */
+/* Mantiene resaltado el enlace del dashboard cuando su sección es el destino actual. */
 body:has(#dashboard:target) nav a[href="#dashboard"] {
     background: var(--color-secundario);
 }
@@ -110,13 +111,13 @@ main {
     width: 100%;
     min-width: 0;
     max-width: 1400px;
-    padding: 24px 32px;
+    padding: 20px 32px;
     margin: 0 auto;
 }
 
 /* Título e introducción del dashboard */
 #dashboard > h2 {
-    margin: 0 0 16px;
+    margin: 0 0 8px;
     font-size: 1.8rem;
 }
 
@@ -140,6 +141,7 @@ main {
 /* Resumen mensual */
 #resumen h3,
 #dashboard-tables > h3 {
+    grid-column: 1 / -1;
     margin: 0 0 14px;
     font-size: 1.2rem;
 }
@@ -149,16 +151,12 @@ main {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     min-width: 0;
     gap: 16px;
-    margin-bottom: 22px;
-}
-
-#resumen h3 {
-    grid-column: 1 / -1;
+    margin-bottom: 20px;
 }
 
 #resumen article,
 #dashboard-tables article {
-    padding: 16px 18px;
+    padding: 14px 16px;
     border: 1px solid var(--color-borde);
     border-radius: 8px;
     background: var(--color-panel);
@@ -169,7 +167,7 @@ main {
 }
 
 article h4 {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     font-size: 1rem;
 }
 
@@ -184,23 +182,19 @@ article h4 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     min-width: 0;
-    gap: 18px;
-}
-
-#dashboard-tables > h3 {
-    grid-column: 1 / -1;
+    gap: 16px;
 }
 
 #dashboard-tables article {
-    padding: 16px 18px;
+    min-height: 200px;
 }
 
 #dashboard-tables article h4 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 #dashboard-tables article p {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
     color: var(--color-suave);
 }
 
@@ -211,15 +205,14 @@ article h4 {
     line-height: 1.3;
 }
 
-#servicios-estrella ol,
-#productos-estrella ol {
+/* Ajustes para las barras de las secciones de servicios y productos estrella */
+:is(#servicios-estrella, #productos-estrella) ol {
     padding: 0;
     list-style: none;
 }
 
-#servicios-estrella li,
-#productos-estrella li {
-    margin-top: 10px;
+:is(#servicios-estrella, #productos-estrella) li {
+    margin-top: 8px;
 }
 
 .barra-etiqueta {
@@ -233,8 +226,7 @@ article h4 {
     white-space: nowrap;
 }
 
-#servicios-estrella progress,
-#productos-estrella progress {
+:is(#servicios-estrella, #productos-estrella) progress {
     display: block;
     width: 100%;
     height: 8px;
@@ -244,20 +236,17 @@ article h4 {
     accent-color: var(--color-principal);
 }
 
-#servicios-estrella progress::-webkit-progress-bar,
-#productos-estrella progress::-webkit-progress-bar {
+:is(#servicios-estrella, #productos-estrella) progress::-webkit-progress-bar {
     border-radius: 5px;
     background: var(--color-borde);
 }
 
-#servicios-estrella progress::-webkit-progress-value,
-#productos-estrella progress::-webkit-progress-value {
+:is(#servicios-estrella, #productos-estrella) progress::-webkit-progress-value {
     border-radius: 5px;
     background: var(--color-principal);
 }
 
-#servicios-estrella progress::-moz-progress-bar,
-#productos-estrella progress::-moz-progress-bar {
+:is(#servicios-estrella, #productos-estrella) progress::-moz-progress-bar {
     border-radius: 5px;
     background: var(--color-principal);
 }
@@ -307,7 +296,7 @@ footer a:focus {
     text-decoration: underline;
 }
 
-/* Adaptación a pantallas de hasta 800px */
+/* Adaptación a pantallas de hasta 850px */
 @media (max-width: 850px) {
     body {
         display: flex;
@@ -383,6 +372,14 @@ footer a:focus {
         width: 100%;
         margin-bottom: 0;
         padding: 12px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    footer br {
+        display: none;
     }
 
     .icono-usuario {
