@@ -188,13 +188,97 @@ article h4 {
 /* Tarjetas del dashboard */
 #dashboard-tables {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(260px, 0.8fr) repeat(2, minmax(0, 0.6fr));
     min-width: 0;
     gap: 16px;
 }
 
+#agenda-diaria {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+#citas-hoy {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#servicios-estrella {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#restock-mas-necesario {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#productos-estrella {
+    grid-column: 3;
+    grid-row: 3;
+}
+
 #dashboard-tables article {
-    min-height: 200px;
+    min-height: 196px;
+}
+
+#agenda-diaria .agenda-horas {
+    max-height: 350px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.agenda-horas li {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    align-items: center;
+    min-height: 25px;
+    padding: 2px 6px;
+    border-bottom: 1px solid var(--color-borde);
+    line-height: 1.2;
+}
+
+.agenda-horas time {
+    color: var(--color-suave);
+    font-weight: bold;
+}
+
+.agenda-horas .hora-ocupada {
+    border-radius: 4px;
+    background: #fbe2e8;
+}
+
+.cita-agenda,
+.cita-en-curso {
+    font-weight: bold;
+}
+
+.cita-agenda {
+    color: var(--color-texto);
+}
+
+.cita-en-curso {
+    color: var(--color-principal);
+}
+
+@media (min-width: 851px) and (max-width: 1050px) {
+    #dashboard-tables {
+        grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+    }
+
+    #agenda-diaria {
+        grid-row: 2 / span 4;
+    }
+
+    #citas-hoy,
+    #servicios-estrella,
+    #restock-mas-necesario,
+    #productos-estrella {
+        grid-column: 2;
+        grid-row: auto;
+    }
 }
 
 #dashboard-tables article h4 {
@@ -357,6 +441,16 @@ footer a:focus {
     #dashboard-tables {
         grid-template-columns: minmax(0, 1fr);
         gap: 10px;
+    }
+
+    #agenda-diaria,
+    #dashboard-tables > article:not(#agenda-diaria) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .agenda-horas li {
+        min-height: 24px;
     }
 
     #resumen {
