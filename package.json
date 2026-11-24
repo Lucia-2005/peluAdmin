@@ -1,0 +1,25 @@
+{
+  "name": "peluadmin",
+  "version": "1.0.0",
+  "description": "he realizado cambios en secciones y nombres encuanto al boceto de figma, ya que no me acababa de convencer. Asi como he alterado el uso de los colores de la paleta original",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucia-2005/peluAdmin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lucia-2005/peluAdmin/issues"
+  },
+  "homepage": "https://github.com/Lucia-2005/peluAdmin#readme",
+  "devDependencies": {
+    "electron": "^45.4.1"
+  }
+}
